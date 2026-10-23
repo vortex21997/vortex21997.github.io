@@ -1,6 +1,6 @@
 ---
 title: "AI로 진행하는 블로그를 시작합니다"
-date: 2026-10-23 12:00:00 +0900
+date: 2026-10-23 10:00:00 +0900
 categories: [Blog, 시작]
 tags: [ai, claude-code, github-pages, chirpy]
 pin: true
