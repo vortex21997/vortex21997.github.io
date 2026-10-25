@@ -27,5 +27,5 @@ order: 4
 - GitHub: [@vortex21997](https://github.com/vortex21997)
 - Instagram: [@vortex21997](https://www.instagram.com/vortex21997)
 - Threads: [@vortex21997](https://www.threads.com/@vortex21997)
-- YouTube: [@vortex21997](https://www.youtube.com/@vortex21997)
+- YouTube: [@vortex2199-x5o](https://www.youtube.com/@vortex2199-x5o)
 - Naver Blog: [vortexneo](https://blog.naver.com/vortexneo)
