@@ -4,6 +4,7 @@ description: "giscus.app이 [ENTER CATEGORY ID HERE]를 그대로 뱉는다면 �
 date: 2026-10-26 11:00:00 +0900
 categories: [블로그, 구축]
 tags: [giscus, chirpy, 댓글, github-pages]
+media_subpath: /assets/img/posts/giscus-category-id/
 ---
 
 정적 블로그에 댓글을 붙이는 가장 흔한 선택이 **giscus**다.
@@ -143,6 +144,14 @@ const themeMap = Theme.newThemeMap(
 > 이 파일만은 테마 원본을 통째로 덮어쓰는 것이라, 버전을 올릴 때 한 번 대조해야 한다.
 > 파일 머리에 메모를 남겨두면 나중에 덜 헤맨다.
 {: .prompt-warning }
+
+적용하면 이렇게 된다. 회색 박스가 사라지고 배경이 그대로 비친다.
+
+![다크 모드 댓글창](giscus-themed-dark.webp)
+_다크 모드 — 배경이 투명해져 본문과 이어진다_
+
+![라이트 모드 댓글창](giscus-themed-light.webp)
+_라이트 모드 — 같은 CSS 한 벌을 색만 바꿔 쓴다_
 
 ## 확인하는 법
 
