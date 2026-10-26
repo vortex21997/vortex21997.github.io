@@ -1,0 +1,73 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
+/* giscus 커스텀 테마 — AI · vortex21997
+ * 베이스: giscus 공식 dark_dimmed 테마 (GitHub Primer, MIT)
+ * 그 아래 블록에서 블로그 팔레트로 덮어쓴다. 아바타에서 뽑은
+ * 시안 #28c8e6 / 바이올렛 #be78ff / 인디고 #19153d 계열.
+ */
+/*! MIT License
+ * Copyright (c) 2018 GitHub Inc.
+ * https://github.com/primer/primitives/blob/main/LICENSE
+ */main{--color-prettylights-syntax-comment:#768390;--color-prettylights-syntax-constant:#6cb6ff;--color-prettylights-syntax-entity:#dcbdfb;--color-prettylights-syntax-storage-modifier-import:#adbac7;--color-prettylights-syntax-entity-tag:#8ddb8c;--color-prettylights-syntax-keyword:#f47067;--color-prettylights-syntax-string:#96d0ff;--color-prettylights-syntax-variable:#f69d50;--color-prettylights-syntax-brackethighlighter-unmatched:#e5534b;--color-prettylights-syntax-invalid-illegal-text:#cdd9e5;--color-prettylights-syntax-invalid-illegal-bg:#922323;--color-prettylights-syntax-carriage-return-text:#cdd9e5;--color-prettylights-syntax-carriage-return-bg:#ad2e2c;--color-prettylights-syntax-string-regexp:#8ddb8c;--color-prettylights-syntax-markup-list:#eac55f;--color-prettylights-syntax-markup-heading:#316dca;--color-prettylights-syntax-markup-italic:#adbac7;--color-prettylights-syntax-markup-bold:#adbac7;--color-prettylights-syntax-markup-deleted-text:#ffd8d3;--color-prettylights-syntax-markup-deleted-bg:#78191b;--color-prettylights-syntax-markup-inserted-text:#b4f1b4;--color-prettylights-syntax-markup-inserted-bg:#1b4721;--color-prettylights-syntax-markup-changed-text:#ffddb0;--color-prettylights-syntax-markup-changed-bg:#682d0f;--color-prettylights-syntax-markup-ignored-text:#adbac7;--color-prettylights-syntax-markup-ignored-bg:#255ab2;--color-prettylights-syntax-meta-diff-range:#dcbdfb;--color-prettylights-syntax-brackethighlighter-angle:#768390;--color-prettylights-syntax-sublimelinter-gutter-mark:#545d68;--color-prettylights-syntax-constant-other-reference-link:#96d0ff;--color-btn-text:#adbac7;--color-btn-bg:#373e47;--color-btn-border:#cdd9e51a;--color-btn-shadow:0 0 #0000;--color-btn-inset-shadow:0 0 #0000;--color-btn-hover-bg:#444c56;--color-btn-hover-border:#768390;--color-btn-active-bg:#3d444d;--color-btn-active-border:#636e7b;--color-btn-selected-bg:#2d333b;--color-btn-primary-text:#fff;--color-btn-primary-bg:#347d39;--color-btn-primary-border:#cdd9e51a;--color-btn-primary-shadow:0 0 #0000;--color-btn-primary-inset-shadow:0 0 #0000;--color-btn-primary-hover-bg:#46954a;--color-btn-primary-hover-border:#cdd9e51a;--color-btn-primary-selected-bg:#347d39;--color-btn-primary-selected-shadow:0 0 #0000;--color-btn-primary-disabled-text:#cdd9e580;--color-btn-primary-disabled-bg:#347d3999;--color-btn-primary-disabled-border:#cdd9e51a;--color-action-list-item-default-hover-bg:#909dab1f;--color-segmented-control-bg:#636e7b1a;--color-segmented-control-button-bg:#22272e;--color-segmented-control-button-selected-border:#636e7b;--color-fg-default:#adbac7;--color-fg-muted:#768390;--color-fg-subtle:#636e7b;--color-canvas-default:#22272e;--color-canvas-overlay:#2d333b;--color-canvas-inset:#1c2128;--color-canvas-subtle:#2d333b;--color-border-default:#444c56;--color-border-muted:#373e47;--color-neutral-muted:#636e7b66;--color-accent-fg:#539bf5;--color-accent-emphasis:#316dca;--color-accent-muted:#4184e466;--color-accent-subtle:#4184e41a;--color-success-fg:#57ab5a;--color-attention-fg:#c69026;--color-attention-muted:#ae7c1466;--color-attention-subtle:#ae7c1426;--color-danger-fg:#e5534b;--color-danger-muted:#e5534b66;--color-danger-subtle:#e5534b1a;--color-primer-shadow-inset:0 0 #0000;--color-scale-gray-7:#373e47;--color-scale-blue-8:#143d79;
+
+  /*! Extensions from @primer/css/alerts/flash.scss */--color-social-reaction-bg-hover:var(--color-scale-gray-7);--color-social-reaction-bg-reacted-hover:var(--color-scale-blue-8)}main .pagination-loader-container{background-image:url(https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg)}main .gsc-loading-image{background-image:url(https://github.githubassets.com/images/mona-loading-dimmed.gif)}
+
+/* ── 블로그 팔레트 덮어쓰기 ─────────────────────────── */
+main {
+  /* 배경을 비워 블로그 바탕이 그대로 비치게 한다 */
+  --color-canvas-default: transparent;
+  --color-canvas-overlay: #171a33;
+  --color-canvas-inset: #0e1126;
+  --color-canvas-subtle: #171a33;
+
+  --color-border-default: #272c54;
+  --color-border-muted: #20244a;
+  --color-neutral-muted: #20244a99;
+
+  --color-fg-default: #c3c8de;
+  --color-fg-muted: #8089a8;
+  --color-fg-subtle: #6b7394;
+
+  --color-accent-fg: #4fd6f0;
+  --color-accent-emphasis: #2a8ba5;
+  --color-accent-muted: #4fd6f04d;
+  --color-accent-subtle: #4fd6f01a;
+
+  --color-btn-text: #c3c8de;
+  --color-btn-bg: #1b1f3c;
+  --color-btn-border: #2e3460;
+  --color-btn-hover-bg: #232851;
+  --color-btn-hover-border: #3a4176;
+  --color-btn-active-bg: #1b1f3c;
+
+  /* 기본 초록 대신 바이올렛 */
+  --color-btn-primary-text: #ffffff;
+  --color-btn-primary-bg: #6b4fd8;
+  --color-btn-primary-border: transparent;
+  --color-btn-primary-hover-bg: #7c62e0;
+  --color-btn-primary-hover-border: transparent;
+  --color-btn-primary-disabled-bg: #6b4fd866;
+
+  --color-social-reaction-bg-hover: #232851;
+  --color-social-reaction-bg-reacted-hover: #2b2550;
+  --color-primer-border-active: #c492ff;
+
+  --color-segmented-control-bg: #171a33;
+  --color-segmented-control-button-bg: #232851;
+  --color-segmented-control-button-selected-border: #3a4176;
+
+  background: transparent;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system,
+    'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  word-break: keep-all;
+}
+
+main .gsc-comment-box,
+main .gsc-timeline,
+main .gsc-comment > div {
+  border-radius: 10px;
+}
+
+main .gsc-header {
+  padding-bottom: 0.5rem;
+}

@@ -1,0 +1,74 @@
+<!-- https://giscus.app/ -->
+{%- comment -%}
+  Chirpy 기본 include를 덮어쓴 것. 바뀐 곳은 themeMap 한 줄뿐으로,
+  giscus 기본 테마(light / dark_dimmed) 대신 블로그 팔레트에 맞춘
+  커스텀 CSS 테마를 넘긴다. 나머지는 테마 원본 그대로다.
+  → 테마 버전을 올릴 때는 원본과 이 파일을 한 번 비교할 것.
+{%- endcomment -%}
+<script>
+  (function () {
+    const themeMap = Theme.newThemeMap(
+      '{{ "/assets/css/giscus-light.css" | absolute_url }}',
+      '{{ "/assets/css/giscus-dark.css" | absolute_url }}'
+    );
+    const initTheme = themeMap[Theme.resolvedTheme];
+
+    let lang = '{{ site.comments.giscus.lang | default: lang }}';
+    {%- comment -%} https://github.com/giscus/giscus/tree/main/locales {%- endcomment -%}
+    if (lang.length > 2 && !lang.startsWith('zh')) {
+      lang = lang.slice(0, 2);
+    }
+
+    let giscusAttributes = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': '{{ site.comments.giscus.repo}}',
+      'data-repo-id': '{{ site.comments.giscus.repo_id }}',
+      'data-category': '{{ site.comments.giscus.category }}',
+      'data-category-id': '{{ site.comments.giscus.category_id }}',
+      'data-mapping': '{{ site.comments.giscus.mapping | default: 'pathname' }}',
+      'data-strict' : '{{ site.comments.giscus.strict | default: '0' }}',
+      'data-reactions-enabled': '{{ site.comments.giscus.reactions_enabled | default: '1' }}',
+      'data-emit-metadata': '0',
+      'data-theme': initTheme,
+      'data-input-position': '{{ site.comments.giscus.input_position | default: 'bottom' }}',
+      'data-lang': lang,
+      'data-loading': 'lazy',
+      crossorigin: 'anonymous',
+      async: ''
+    };
+
+    let giscusNode = document.createElement('script');
+    Object.entries(giscusAttributes).forEach(([key, value]) =>
+      giscusNode.setAttribute(key, value)
+    );
+
+    const $footer = document.querySelector('footer');
+    $footer.insertAdjacentElement("beforebegin", giscusNode);
+
+    addEventListener('message', (event) => {
+      if (event.source === window && event.data && event.data.id === Theme.eventId) {
+        const newTheme = themeMap[Theme.resolvedTheme];
+
+        const message = {
+          setConfig: {
+            theme: newTheme
+          }
+        };
+
+        const iframe = document.querySelector('.giscus-frame');
+
+        if (!iframe) {
+          return;
+        }
+
+        if (iframe.classList.contains('giscus-frame--loading')) {
+          let url = new URL(iframe.src);
+          url.searchParams.set('theme', newTheme);
+          iframe.src = url.toString();
+        }
+
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+    });
+  })();
+</script>
