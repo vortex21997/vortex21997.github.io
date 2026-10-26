@@ -1,0 +1,381 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}',
+  $font-family-base: (
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    'Apple SD Gothic Neo',
+    'Malgun Gothic',
+    sans-serif
+  ),
+  $font-family-heading: (
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    'Apple SD Gothic Neo',
+    'Malgun Gothic',
+    sans-serif
+  )
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* ==========================================================================
+   브랜드 — 아바타(픽셀아트 로봇)에서 뽑은 색
+   시안 #28c8e6 · 바이올렛 #be78ff · 라벤더 #786ebe
+   인디고 #19153d · 딥틸 #0b3b59
+   ========================================================================== */
+
+@mixin brand-light {
+  --brand-cyan: #0d7f9c;
+  --brand-violet: #7540d8;
+  --brand-ink: #19153d;
+
+  --link-color: #0d7f9c;
+  --link-underline-color: #b9dfe8;
+  --heading-color: #1b1b2b;
+  --text-color: #35353f;
+  --checkbox-checked-color: var(--brand-cyan);
+  --toc-highlight: var(--brand-cyan);
+  --btn-share-hover-color: var(--brand-cyan);
+
+  /* 사이드바는 라이트/다크 모두 아바타 그라데이션을 쓴다 */
+  --sidebar-bg: linear-gradient(170deg, #19153d 0%, #1b2748 55%, #0b3b59 100%);
+  --sidebar-border-color: transparent;
+  --sidebar-muted-color: #a9b4cf;
+  --sidebar-active-color: #ffffff;
+  --sidebar-hover-bg: rgb(120 110 190 / 26%);
+  --sidebar-btn-bg: rgb(255 255 255 / 9%);
+  --sidebar-btn-color: #c2cbe4;
+  --site-title-color: #ffffff;
+  --site-subtitle-color: #9fb3d4;
+  --avatar-border-color: rgb(40 200 230 / 55%);
+
+  --tag-hover: #e4dcfa;
+  --search-tag-bg: #f3f0fb;
+  --categories-icon-hover-color: var(--brand-violet);
+  --timeline-node-bg: var(--brand-violet);
+  --btn-paginator-hover-color: #eef4f7;
+}
+
+@mixin brand-dark {
+  --brand-cyan: #4fd6f0;
+  --brand-violet: #c492ff;
+  --brand-ink: #0f1228;
+
+  /* 중립 회색 대신 아바타의 인디고 계열로 */
+  --main-bg: #11132a;
+  --main-border-color: #20244a;
+  --text-color: #c3c8de;
+  --text-muted-color: #8089a8;
+  --text-muted-highlight-color: #aab2cc;
+  --heading-color: #e6e9f5;
+  --label-color: #9aa2c0;
+
+  --link-color: #4fd6f0;
+  --link-underline-color: #246b7f;
+  --blockquote-border-color: #2b3059;
+  --blockquote-text-color: #8089a8;
+
+  --button-bg: #181b35;
+  --btn-border-color: #272c54;
+  --btn-backtotop-border-color: #272c54;
+  --checkbox-color: #4a5080;
+  --checkbox-checked-color: var(--brand-cyan);
+
+  --card-bg: #171a33;
+  --card-hover-bg: #212648;
+  --card-shadow:
+    rgb(6 8 24 / 60%) 0 6px 18px 0, rgb(120 110 190 / 18%) 0 0 0 1px;
+  --card-header-bg: #1c203c;
+
+  --menu-bg: #181b35;
+  --menu-border-color: rgb(120 110 190 / 32%);
+  --menu-highlight-bg: rgb(120 110 190 / 14%);
+  --menu-active-color: #e6e9f5;
+
+  --topbar-bg: rgb(17 19 42 / 72%);
+  --search-border-color: #272c54;
+  --search-icon-color: #5c6390;
+  --input-focus-border-color: #786ebe;
+
+  --sidebar-bg: linear-gradient(170deg, #19153d 0%, #16203f 55%, #0b3b59 100%);
+  --sidebar-border-color: transparent;
+  --sidebar-muted-color: #8d98b8;
+  --sidebar-active-color: #ffffff;
+  --sidebar-hover-bg: rgb(120 110 190 / 24%);
+  --sidebar-btn-bg: rgb(255 255 255 / 8%);
+  --sidebar-btn-color: #aab4d0;
+  --site-title-color: #ffffff;
+  --site-subtitle-color: #93a7c8;
+  --avatar-border-color: rgb(79 214 240 / 60%);
+
+  --post-list-text-color: #b2b8d2;
+  --btn-patinator-text-color: #c3c8de;
+  --btn-paginator-hover-color: #212648;
+  --toc-highlight: var(--brand-cyan);
+  --toc-popup-border-color: #2b3059;
+  --btn-share-color: #7a82a5;
+  --btn-share-hover-color: var(--brand-cyan);
+
+  --tb-odd-bg: #181b35;
+  --tb-even-bg: #14172e;
+  --tb-border-color: #272c54;
+  --tag-hover: #2b2550;
+  --tag-border: #2e3460;
+  --search-tag-bg: #1b1f3c;
+  --categories-border: rgb(255 255 255 / 10%);
+  --categories-hover-bg: #212648;
+  --categories-icon-hover-color: var(--brand-violet);
+  --timeline-color: rgb(255 255 255 / 9%);
+  --timeline-node-bg: var(--brand-violet);
+  --timeline-year-dot-color: #11132a;
+
+  /* 안내 블록도 인디고 바탕에 맞춘다 */
+  --prompt-text-color: rgb(216 221 240 / 82%);
+  --prompt-tip-bg: rgb(23 82 72 / 62%);
+  --prompt-tip-icon-color: #35c9a6;
+  --prompt-info-bg: rgb(16 58 92 / 70%);
+  --prompt-info-icon-color: var(--brand-cyan);
+  --prompt-warning-bg: rgb(84 64 18 / 72%);
+  --prompt-warning-icon-color: #e8b04b;
+  --prompt-danger-bg: rgb(86 28 44 / 70%);
+  --prompt-danger-icon-color: #ff6b8a;
+
+  --inline-code-bg: rgb(120 110 190 / 16%);
+  --highlight-bg-color: #161930;
+  --language-border-color: #242949;
+  --code-color: #c9cee5;
+  --kbd-bg-color: #181b35;
+  --kbd-wrap-color: #4a5080;
+  --kbd-text-color: #d7dbeb;
+  --mask-bg: #343a63;
+  --img-bg: radial-gradient(circle, #171a33 0%, #1d2140 100%);
+}
+
+:root[data-bs-theme='light'] {
+  @include brand-light;
+}
+
+:root[data-bs-theme='dark'] {
+  @include brand-dark;
+}
+
+:root:not([data-bs-theme]) {
+  @media (prefers-color-scheme: light) {
+    @include brand-light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include brand-dark;
+  }
+}
+
+/* ==========================================================================
+   타이포그래피
+   ========================================================================== */
+
+body {
+  letter-spacing: -0.003em;
+  word-break: keep-all; /* 한글은 어절 단위로 끊는다 */
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.022em;
+  text-wrap: balance;
+}
+
+code,
+pre,
+kbd,
+.highlight,
+#post-list .card-text time,
+.post-meta {
+  font-feature-settings: 'tnum';
+}
+
+code,
+pre,
+kbd,
+.highlight code {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* 본문 가독성 — 한글은 줄간을 조금 더 */
+.content {
+  line-height: 1.78;
+}
+
+.content p,
+.content li {
+  letter-spacing: -0.004em;
+}
+
+/* ==========================================================================
+   사이드바 — 그라데이션 위에 얹히는 요소들
+   ========================================================================== */
+
+#sidebar {
+  #avatar img {
+    transition: transform 0.25s ease;
+  }
+
+  #avatar:hover img {
+    transform: scale(1.04);
+  }
+
+  /* 긴 이름이 "AI ·" / "vortex21997"로 어색하게 쪼개지지 않게 */
+  .site-title {
+    font-size: 1.4rem;
+    line-height: 1.25;
+
+    a {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  .site-subtitle {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-top: 0.3rem;
+  }
+
+  /* 현재 메뉴에 시안 레일 */
+  ul li.nav-item {
+    .nav-link {
+      border-radius: 8px;
+    }
+
+    &.active .nav-link {
+      position: relative;
+      background: rgb(255 255 255 / 10%);
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 22% auto 22% 0;
+        width: 3px;
+        border-radius: 0 3px 3px 0;
+        background: var(--brand-cyan);
+      }
+    }
+  }
+
+  .sidebar-bottom a:hover,
+  .sidebar-bottom span:hover {
+    color: var(--brand-cyan) !important;
+  }
+}
+
+/* ==========================================================================
+   홈 글 목록
+   ========================================================================== */
+
+#post-list {
+  .card {
+    border: 1px solid var(--btn-border-color);
+    transition:
+      border-color 0.18s ease,
+      transform 0.18s ease;
+  }
+
+  .card:hover {
+    border-color: var(--brand-violet);
+    transform: translateY(-2px);
+  }
+
+  .card-title {
+    letter-spacing: -0.022em;
+  }
+
+  /* 핀 고정 글 표시 */
+  .pin {
+    color: var(--brand-violet);
+  }
+}
+
+/* ==========================================================================
+   글 본문
+   ========================================================================== */
+
+.post-tail-wrapper .post-tags .post-tag:hover {
+  border-color: var(--brand-violet);
+  color: var(--brand-violet);
+}
+
+#toc-wrapper li.active > a,
+#toc-wrapper .toc-link.active {
+  font-weight: 600;
+}
+
+blockquote[class^='prompt-'] {
+  border-radius: 8px;
+}
+
+/* 인용 기본형에 바이올렛 레일 */
+blockquote:not([class^='prompt-']) {
+  border-left-color: var(--brand-violet);
+}
+
+/* 표 */
+#core-wrapper table:not(.highlight table) {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* 링크 밑줄을 조금 아래로 */
+.content a:not(.img-link):not([class*='btn']) {
+  text-underline-offset: 3px;
+}
+
+/* ==========================================================================
+   태그 · 카테고리
+   ========================================================================== */
+
+.post-tag,
+#tags .tag {
+  border-radius: 7px;
+}
+
+#tags .tag:hover {
+  border-color: var(--brand-violet);
+}
+
+#access-lastmod a:hover,
+#trending-tags .post-tag:hover {
+  color: var(--brand-violet);
+}
+
+/* ==========================================================================
+   상단바 검색 포커스
+   ========================================================================== */
+
+#search-input:focus {
+  box-shadow: 0 0 0 3px rgb(120 110 190 / 22%);
+}
+
+/* 맨 위로 버튼 */
+#back-to-top:hover {
+  color: var(--brand-cyan);
+  border-color: var(--brand-cyan);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #post-list .card:hover,
+  #sidebar #avatar:hover img {
+    transform: none;
+  }
+}
