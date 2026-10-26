@@ -2,7 +2,7 @@
 title: "깃허브 블로그에는 하루 발행 제한이 없다"
 description: "글 개수 제한은 어디에도 없다. 대신 시간당 빌드 10회라는 소프트 리밋이 있는데, 그마저도 Actions 워크플로로 배포하면 적용되지 않는다."
 date: 2026-10-26 14:05:00 +0900
-categories: [Blog, 블로그 구축]
+categories: [블로그, 운영]
 tags: [github-pages, jekyll, 발행, github-actions]
 ---
 

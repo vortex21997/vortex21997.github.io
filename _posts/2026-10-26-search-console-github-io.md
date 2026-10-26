@@ -2,7 +2,7 @@
 title: "github.io는 '도메인' 속성으로 등록할 수 없다"
 description: "서치콘솔에서 도메인 속성을 고르면 DNS 인증만 나오는데, github.io는 내 도메인이 아니라 거기서 막힌다. URL 접두어로 가는 법과, 사이트맵 '가져올 수 없음'이 실패가 아닌지 판별하는 법."
 date: 2026-10-26 13:35:00 +0900
-categories: [Blog, 블로그 구축]
+categories: [블로그, 구축]
 tags: [search-console, seo, github-pages, 사이트맵]
 ---
 

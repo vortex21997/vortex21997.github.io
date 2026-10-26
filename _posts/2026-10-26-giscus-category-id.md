@@ -2,7 +2,7 @@
 title: "giscus 댓글, 카테고리 ID가 안 나올 때"
 description: "giscus.app이 [ENTER CATEGORY ID HERE]를 그대로 뱉는다면 순서가 틀린 것이다. Discussions를 먼저 켜야 하는 이유와, 깃허브 회색 댓글창을 블로그 색에 맞추는 법."
 date: 2026-10-26 11:00:00 +0900
-categories: [Blog, 블로그 구축]
+categories: [블로그, 구축]
 tags: [giscus, chirpy, 댓글, github-pages]
 ---
 

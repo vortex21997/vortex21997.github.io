@@ -2,7 +2,7 @@
 title: "Chirpy 테마에는 한글 글꼴이 없다"
 description: "한글 블로그인데 글꼴 설정을 안 건드렸다면, 지금 보이는 글꼴은 테마가 고른 게 아니라 방문자 OS가 떠넘긴 것이다. Pretendard로 바꾸는 방법."
 date: 2026-10-26 10:00:00 +0900
-categories: [Blog, 블로그 구축]
+categories: [블로그, 구축]
 tags: [chirpy, jekyll, 글꼴, github-pages]
 ---
 

@@ -2,7 +2,7 @@
 title: "Claude Code를 제대로 쓰려면 알아야 할 네 가지"
 description: "매번 같은 설명을 반복하고, 매번 같은 허락을 누르고 있다면 설정을 안 쓰고 있는 것이다. CLAUDE.md, settings.json, 권한 규칙, 훅."
 date: 2026-10-26 14:20:00 +0900
-categories: [Blog, 블로그 구축]
+categories: [AI 에이전트, Claude Code]
 tags: [claude-code, ai, 개발도구, 자동화]
 ---
 
