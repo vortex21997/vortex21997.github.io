@@ -3,7 +3,7 @@ title: "Claude Code 슬래시 명령어, 119개 중에 실제로 쓰는 것"
 description: "/를 치면 목록이 끝없이 나온다. 작업 흐름의 어느 시점에 뭘 쓰는지로 묶으면 외울 게 열 개 남짓이다."
 date: 2026-10-26 09:30:00 +0900
 categories: [AI 에이전트, Claude Code]
-tags: [claude-code, ai, 개발도구, 명령어]
+tags: [슬래시-명령어, 커스텀-명령어]
 ---
 
 > **2026-10 기준.** [공식 명령어 레퍼런스](https://code.claude.com/docs/en/commands)를 근거로 정리했다.

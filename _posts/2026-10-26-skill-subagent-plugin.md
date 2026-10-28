@@ -3,7 +3,7 @@ title: "스킬·서브에이전트·플러그인, 뭐가 다른가"
 description: "이름이 비슷해서 제일 헷갈리는 셋. 갈리는 기준은 하나다 — 컨텍스트를 공유하느냐, 분리하느냐."
 date: 2026-10-26 10:30:00 +0900
 categories: [AI 에이전트, Claude Code]
-tags: [claude-code, ai, 서브에이전트, 스킬]
+tags: [서브에이전트, 스킬]
 ---
 
 > **2026-10 기준.** [스킬](https://code.claude.com/docs/en/skills), [서브에이전트](https://code.claude.com/docs/en/sub-agents),

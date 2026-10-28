@@ -3,7 +3,7 @@ title: "모델과 effort 고르기 — 저장되는 것과 이번만인 것"
 description: "/model에서 Enter와 s가 다르게 동작한다. 하나는 기본값을 바꾸고 하나는 이번 세션만이다. 모르면 다음 세션에서 당황한다."
 date: 2026-10-26 12:30:00 +0900
 categories: [AI 에이전트, Claude Code]
-tags: [claude-code, ai, 모델, 비용]
+tags: [모델, 비용]
 ---
 
 > **2026-10 기준.** [모델 설정 문서](https://code.claude.com/docs/en/model-config)를 근거로 정리했다.

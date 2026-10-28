@@ -3,7 +3,7 @@ title: "CLAUDE.md와 AGENTS.md, 둘 다 둬야 하나"
 description: "Claude Code는 AGENTS.md도 읽는다. 다만 둘이 같이 있으면 AGENTS.md를 무시한다. 그 규칙을 모르면 적어둔 지시가 조용히 안 먹는다."
 date: 2026-10-26 13:10:00 +0900
 categories: [AI 에이전트, Claude Code]
-tags: [claude-code, agents-md, ai, 개발도구]
+tags: [claude-md, agents-md]
 ---
 
 > **2026-10 기준.** [agents.md](https://agents.md/)와

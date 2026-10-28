@@ -3,7 +3,7 @@ title: "한 줄 질문했는데 사용량이 왜 이렇게 빠지나"
 description: "세션을 하루 종일 열어두면, 짧은 질문 하나도 대화 전체를 다시 보낸다. 컨텍스트가 비용이 되는 구조와 /clear·/compact를 가르는 기준."
 date: 2026-10-26 11:30:00 +0900
 categories: [AI 에이전트, Claude Code]
-tags: [claude-code, ai, 컨텍스트, 비용]
+tags: [컨텍스트, 비용]
 ---
 
 > **2026-10 기준.** [비용 관리 문서](https://code.claude.com/docs/en/costs)를 근거로 정리했다.

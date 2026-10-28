@@ -3,7 +3,7 @@ title: "Chirpy를 업그레이드 가능한 상태로 고치기"
 description: "gem 테마는 파일을 같은 경로에 두면 덮인다. 그래서 아무 데나 덮으면 다음 버전에서 깨진다. 테마가 열어둔 확장 지점 세 곳과 각각의 비용."
 date: 2026-10-26 13:50:00 +0900
 categories: [블로그, 구축]
-tags: [chirpy, jekyll, 테마, github-pages]
+tags: [chirpy, jekyll, 테마]
 ---
 
 Chirpy는 **gem 테마**다. `Gemfile`에 이렇게만 적혀 있고, 실제 파일은 레포에 없다.

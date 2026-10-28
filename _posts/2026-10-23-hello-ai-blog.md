@@ -1,8 +1,9 @@
 ---
 title: "AI로 진행하는 블로그를 시작합니다"
+description: "블로그 개설부터 테마 세팅, 깃허브 프로필까지 전부 AI 에이전트(Claude Code)에게 맡겨 만든 과정과 앞으로 쓸 글."
 date: 2026-10-23 10:00:00 +0900
 categories: [블로그, 시작]
-tags: [ai, claude-code, github-pages, chirpy]
+tags: [claude-code, github-pages, chirpy]
 pin: true
 image:
   path: /assets/img/og-image.png

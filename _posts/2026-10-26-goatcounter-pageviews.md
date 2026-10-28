@@ -3,7 +3,7 @@ title: "GoatCounter 조회수가 0에서 안 변할 때"
 description: "403은 설정 하나로 풀리고, 그 뒤에도 0인 건 캐시 때문이다. 설치가 잘못된 게 아니라는 걸 확인하는 순서."
 date: 2026-10-26 12:00:00 +0900
 categories: [블로그, 구축]
-tags: [goatcounter, 통계, chirpy, github-pages]
+tags: [goatcounter, 통계, chirpy]
 ---
 
 **GoatCounter**는 구글 애널리틱스 대신 쓸 만한 가벼운 방문자 통계다.
