@@ -277,7 +277,10 @@ Chirpy는 gem 테마라 레포에 같은 경로의 파일을 두면 덮인다. *
 
 - SCSS 변수(`$font-family-base` 등)는 **`@use 'abstracts/variables' with (...)` 안에서만** 바뀐다. 파일 아래에 다시 적으면 안 먹는다.
 - 색은 CSS 변수를 덮는다. 선택자는 `[data-bs-theme='dark']`와 `:not([data-bs-theme])` **둘 다** 필요하다. 방문자 대부분은 테마를 직접 고르지 않아 속성이 없는 상태로 본다.
-- 3단계로 덮은 파일에는 **파일 머리에 왜 덮었는지 주석을 남긴다.** 현재 덮은 파일은 `_includes/comments/giscus.html` 하나뿐이고, `themeMap` 한 줄만 바꿨다.
+- 3단계로 덮은 파일에는 **파일 머리에 왜 덮었는지 주석을 남긴다.** 현재 덮은 파일:
+  - `_includes/comments/giscus.html` — `themeMap` 한 줄만 바꿨다.
+  - `assets/feed.xml` — 원본은 제목을 이스케이프하지 않아 제목에 `<`가 있으면 피드가 깨진다. 값마다 `xml_escape`를 걸고 끝의 전체 `&` 치환을 뺐다.
+    이 피드는 프로필 저장소의 "Latest blog posts" 워크플로가 읽으므로, 깨지면 그쪽이 실패 메일을 보낸다.
 
 ## 연동된 것
 
